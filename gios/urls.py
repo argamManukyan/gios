@@ -25,6 +25,7 @@ urlpatterns = [
 ]
 
 handler404 = 'contactus.views.not_found_page'
+handler500 = 'contactus.views.not_found_page'
 
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
