@@ -16,4 +16,4 @@ DATABASES = {
     }
 }
 
-DEBUG = config('DEBUG')
+DEBUG = config('DEBUG', cast=bool)
