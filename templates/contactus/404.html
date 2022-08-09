@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no'>
+    <title>GIOS IT LABORATORY: Page Not Found</title>
+    <meta name="Description" content="We build digital products which help businesses to grow and to fully accomplish their goals | +374(96) 77 13 13">
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}">
+    <link rel="stylesheet"    href="{% static 'css/gios_color.css' %}">
+    <link rel="stylesheet"    href="{% static 'css/gios_style.css' %}">
+    <style>
+        body {
+             background: url({% static 'img/404.jpg' %}) no-repeat center center;
+             background-size: cover;
+        }
+    </style>
+</head>
+
+<body id="animated">
+<div id='stars'></div>
+<div id='stars2'></div>
+<div id='stars3'></div>
+    <div id="root">
+        
+        <!-- header-->
+        {% include 'includes/header.html' %}
+        <!-- header end -->
+
+        <!-- Main content -->
+        <main class="content" id="home">
+            <div class="cnt">
+                <div class="row align-items-center">
+                    <div class="col col-auto">
+                        <div class="main-banner-text">
+                            <h1>404 Page Not Found</h1>
+                            <p>Sorry, we couldn't find the page you're looking for.</p>
+                            
+                            <div class="discuss-place">
+                                <a href="index.html" class="button big dark">GO TO HOME</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- Main content end -->
+
+        <!-- footer -->
+        {% include 'includes/footer.html' %}
+        <!-- footer end -->
+
+    </div>
+
+    {% include 'includes/contact_modal.html' %}
+
+    <script src="{% static 'js/giositlab_j.js' %}"></script>
+    <script src="{% static 'js/giositlab_script.js' %}"></script>
+    
+</body>
+
+</html>

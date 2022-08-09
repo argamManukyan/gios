@@ -1,0 +1,50 @@
+{% load static %}
+<div class="contact-modal">
+    <div class="contact-modal-dialog">
+        <div class="contact-modal-content">
+            <div class="contact-modal-header">
+                <div class="modal-header flex-center-between">
+                    <div class="l-modal">
+                        <h2>Curious about the project cost?</h2>
+                        <span>FILL IN AND GET A QUOTE</span>
+                    </div>
+                    <img src="{% static 'img/icons/modal-close.svg' %}" class="modal-close" alt="Close">
+                </div>
+            </div>
+
+            <div class="contact-modal-body">
+                <form id="contact-form" method="post">
+                    {% csrf_token %}
+                    <div class="input-fields all-auth">
+                        <label for="name">Your Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="two-inputs flex-center-between">
+                        <div class="input-fields all-auth">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="input-fields all-auth">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                    </div>
+                    <div class="input-fields all-auth">
+                        <label for="message">Project Details *</label>
+                        <textarea id="message" name="message" class="fw" rows="4" required></textarea>
+                    </div>
+
+                    <div class="line-inputs-group">
+                        <button type="submit" id="SendMess" class="button big dark" name="submit">SEND</button>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<div class="contact-overlay"></div>

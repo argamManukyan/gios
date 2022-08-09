@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no'>
+    <title>Gios: Custom Software Development</title>
+    <meta name="Description" content="We build digital products which help businesses to grow and to fully accomplish their goals | +374(96) 77 13 13">
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}">
+    <link rel="stylesheet" href="{% static 'css/gios_color.css' %}">
+    <link rel="stylesheet" href="{% static 'css/gios_style.css' %}">
+    
+</head>
+
+<body id="animated">
+<div id='stars'></div>
+<div id='stars2'></div>
+<div id='stars3'></div>
+    <div id="root">
+        
+        <!-- header-->
+       {% include 'includes/header.html' %}
+        <!-- header end -->
+
+        <!-- Main content -->
+        <main class="content" id="home">
+            <div class="cnt">
+                <div class="row align-items-center">
+                    <div class="col col-2">
+                        <div class="main-banner-text">
+                            <h1>Your Software Development Business Partner</h1>
+                            <p>We build digital products which help businesses to grow and to fully accomplish their goals.</p>
+                            <ul class="g-tags align-items-center">
+                                <li>UX/UI</li>
+                                <li>IOS</li>
+                                <li>Android</li>
+                                <li>Web</li>
+                                <li>QA</li>
+                                <li>MVP</li>
+                            </ul>
+                            <div class="discuss-place">
+                                <h2>LET’S DISCUSS YOUR PROJECT</h2>
+                                <button type="button" id="cmodal" class="button big dark">Start Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-2">
+                        <div class="main-banner-img rotate">
+                            <img src="{% static 'img/globe.svg' %}" alt="Your Software Development Partner">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- Main content end -->
+        <!-- footer -->
+       {% include 'includes/footer.html' %}
+        <!-- footer end -->
+    </div>
+
+    <!-- Contact Modal -->
+    {% include 'includes/contact_modal.html' %}
+    <!-- Contact Modal end -->
+    {% if messages %}
+    <!-- alert message -->
+    {% for message in messages %}
+    <div id="message-notification" class="alert alert-{% if message.tags == 'success' %}success{% else %}danger{% endif %}">
+        <div class="align-items-center">
+            <img src="{% static 'img/icons/message.svg' %}" class="alert-img" alt="notification">
+            <span>{{ message|safe }}</span>
+        </div>
+        <img src="{% static 'img/icons/modal-close.svg' %}" class="errorClose" alt="Close">
+    </div>
+        {% endfor %}
+    <!-- alert message end -->
+    {% endif %}
+    <script src="{% static 'js/giositlab_j.js' %}"></script>
+    <script src="{% static 'js/giositlab_script.js' %}"></script>
+    
+</body>
+
+</html>
